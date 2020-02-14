@@ -1,0 +1,57 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lemonada&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<div class="navbar navbar-dark bg-info" style="background-image: linear-gradient(to right, rgb(10, 22, 163), rgb(32, 43, 171), rgb(54, 63, 179), rgb(75, 84, 187), rgb(97, 105, 195), rgb(119, 126, 203), rgb(141, 146, 210), rgb(163, 167, 218), rgb(185, 188, 226), rgb(206, 209, 234), rgb(228, 229, 242), rgb(250, 250, 250));" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+       <a class="navbar-brand text-black" href="/" id="logo">Pitch IT<img src="https://www.thedesignlove.com/wp-content/uploads/2016/09/Top-20-Famous-Yellow-Logos-post-it-1024x736.jpg" width="40rem"></a>
+    </div>
+
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+
+        <li >{{current_user.username}}</li>
+        {% if current_user.is_authenticated %}
+        <li><a href="{{url_for('auth.logout')}}">Sign Out</a></li>
+        {% endif %}
+
+        <li><a href="{{url_for('auth.login')}}">Sign In</a></li>
+
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="overlay">
+    <div class="bgimage">
+        <div class="p-3 p-md-5 m-md-3 text-center bg-transparent">
+            <div class="col-md-12 p-lg-5 mx-auto my-5">
+                <div class="display-4">
+                <h1 style="font-family: 'Lemonada', cursive; font-size: 69px;">PITCH IT</h1>
+                <hr class="hr">
+                <p class="lead" style="font-family: 'Lemonada', cursive; font-size: 30px;">THE BEST PITCH SITE </p>
+                <div id="butt">
+                    <a class="btn" href="/pitches/new/">New Pitch</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .display-4{
+    margin-top: 200px;
+    margin-bottom: 165px;
+    }
+    .btn{
+    border: 2px solid black;
+    background-color:#d0e9ee;
+    border: 0px;
+    box-shadow: 2px 2px 10px;
+    }
+    .btn:hover{
+    background-color:#d0e9ee;
+    border: 0px;
+    box-shadow: 2px 2px 10px;
+    }
+</style>
