@@ -1,5 +1,4 @@
 alembic==1.4.0
-apturl==0.5.2
 asn1crypto==0.24.0
 autopep8==1.5
 blinker==1.4
