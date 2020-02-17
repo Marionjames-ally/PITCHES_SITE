@@ -61,7 +61,6 @@ def new_comment(pitch_id):
         db.session.add(new_comment)
         db.session.commit()
 
-
         return redirect(url_for('.new_comment', pitch_id= pitch_id))
 
     all_comments = Comment.query.filter_by(pitch_id = pitch_id).all()
