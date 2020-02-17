@@ -24,7 +24,8 @@ class ProdConfig(Config):
         Config: The parent configuration class with General configuration settings
     '''
     
-    pass
+    SQLALCHEMY_DATABASE_URI = ('postgresql+psycopg2://moringa:1234@localhost/pitch')
+
 
 class TestConfig(Config):
     '''
@@ -41,7 +42,7 @@ class DevConfig(Config):
     Args:
         Config: The parent configuration class with General configuration settings
     '''
-    SQLALCHEMY_DATABASE_URI = ('postgresql+psycopg2://moringa:1234@localhost/pitch')
+    pass
 
 
 config_options = {
